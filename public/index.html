@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stranger Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="mode-selection">
+            <button onclick="startTextChat()">Start Text Chat</button>
+            <button onclick="startVideoChat()">Start Video Chat</button>
+        </div>
+
+        <div id="chat-box" class="hidden">
+            <div id="video-section">
+                <video id="localVideo" autoplay muted></video>
+                <video id="remoteVideo" autoplay></video>
+            </div>
+
+            <div id="messages"></div>
+            <input type="text" id="input" placeholder="Type your message...">
+            <div class="actions">
+                <button id="nextBtn">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
